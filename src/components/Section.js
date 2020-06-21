@@ -5,18 +5,19 @@ class Section extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      page: props.page,
+      query: this.props.query,
+      page: this.props.page,
       articles: []
     }
   }
 
   async componentDidMount() {
     const articles = await apiService.getRepositoriesByPage(this.props.query, this.props.page)
-    this.setState({articles})
+    this.setState({ articles })
   }
 
   getArticles() {
-    if(this.state.articles.length) {
+    if (this.state.articles.length) {
       return this.state.articles.map((art) => {
         const date = new Date(art['updated_at']).toLocaleString()
         return (
@@ -32,18 +33,19 @@ class Section extends React.Component {
   }
 
   renderArticles() {
-    if (this.props.page == this.state.page) {
+    if (this.props.page === this.state.page && this.props.query === this.state.query) {
       try {
         return this.getArticles()
-      } catch(e) {
+      } catch (e) {
         return <code>API rate limit exceeded for your IP. Wait a few seconds...</code>
       }
     } else {
-      apiService.getRepositoriesByPage(this.props.query, this.props.page).then(res => {
-        this.setState({page: this.props.page, articles: res})
-      })
+      apiService.getRepositoriesByPage(this.props.query, this.props.page)
+        .then(res => {
+          this.setState({ query: this.props.query, page: this.props.page, articles: res })
+        })
     }
-    
+
   }
 
   render() {

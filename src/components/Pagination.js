@@ -7,7 +7,7 @@ class Pagination extends React.Component {
   }
 
   changePage(e) {
-    if(e.target.id) {
+    if (e.target.id) {
       this.props.onPageChange(e.target.id)
     }
   }
@@ -15,10 +15,10 @@ class Pagination extends React.Component {
   getPageLists() {
     let pages = [];
     for (let i = 1; i <= 10; i++) {
-      if (i == this.props.page) {
-      pages.push(<a id={i} key={i} href={"#"+i} className="active">{i}</a>) 
+      if (i === parseInt(this.props.page)) {
+        pages.push(<a id={i} key={i} href={"#" + i} className="active">{i}</a>)
       } else {
-      pages.push(<a id={i} key={i} href={"#"+i}>{i}</a>)
+        pages.push(<a id={i} key={i} href={"#" + i}>{i}</a>)
       }
     }
     return pages
