@@ -5,12 +5,13 @@ class Section extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      page: props.page,
       articles: []
     }
   }
 
   async componentDidMount() {
-    const articles = await apiService.getRepositoriesByPage(1)
+    const articles = await apiService.getRepositoriesByPage(this.props.query, this.props.page)
     this.setState({articles})
   }
 
@@ -30,10 +31,25 @@ class Section extends React.Component {
     }
   }
 
+  renderArticles() {
+    if (this.props.page == this.state.page) {
+      try {
+        return this.getArticles()
+      } catch(e) {
+        return <code>API rate limit exceeded for your IP. Wait a few seconds...</code>
+      }
+    } else {
+      apiService.getRepositoriesByPage(this.props.query, this.props.page).then(res => {
+        this.setState({page: this.props.page, articles: res})
+      })
+    }
+    
+  }
+
   render() {
     return (
       <section>
-        {this.getArticles()}
+        {this.renderArticles()}
       </section>
     )
   }
