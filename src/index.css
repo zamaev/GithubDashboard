@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-width: 600px;
+}
+
+
+/* ===== Header ===== */
+
+header {
+  margin-top: 30px;
+  text-align: center;
+}
+
+h1 {
+  display: inline;
+  background-image: url(https://github.com/fluidicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+
+/* ===== Search ===== */
+
+input.search {
+  width: 400px;
+  padding: 9px;
+  display: block;
+  margin: 40px auto;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  transition: border .3s;
+}
+
+input.search:hover {
+  border-bottom: 1px solid #3853D1;
+}
+
+
+/* ===== Section ===== */
+
+section {
+  max-width: 700px;
+  min-width: 600px;
+  margin: 30px auto;
+}
+
+section article {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+}
+
+section article:first-child {
+  border-top: 0;
+}
+
+
+/* === Article elements === */
+
+.repositoryTitle {
+  float: left;
+}
+
+.stars {
+  background-image: url(https://img.icons8.com/fluent/48/000000/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 23px;
+  float: right;
+  margin-top: 7px;
+}
+
+.updateDate { 
+  clear: both;
+}
+
+.githubUrl a {
+  text-decoration: none;
+}
+
+
+/* ===== Pagination ===== */
+
+.pagination {
+  margin: 40px;
+  text-align: center;
+}
+
+.pagination a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: #3853D1;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
