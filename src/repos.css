@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-width: 600px;
+}
+
+
+/* ===== Header ===== */
+
+header {
+  margin-top: 30px;
+  text-align: center;
+}
+
+h1 {
+  display: inline;
+  background-image: url(https://github.com/fluidicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+
+
+/* ===== Section ===== */
+
+section {
+  max-width: 700px;
+  min-width: 600px;
+  margin: 30px auto;
+}
+
+section article {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+}
+
+section article:first-child {
+  border-top: 0;
+}
+
+
+/* ===== Article elements ===== */
+
+#goHome {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  margin-left: 0;
+  text-decoration: none;
+  background-image: url(https://img.icons8.com/ios-filled/50/000000/chevron-left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.repositoryTitle {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.stars {
+  background-image: url(https://img.icons8.com/fluent/48/000000/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 23px;
+  float: left;
+  margin-top: 7px;
+  margin-left: 15px;
+}
+
+.updateDate { 
+  background-color: #3853D1;
+  color: white;
+  border-radius: 3px;
+  float: right; 
+  padding: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 7px;
+}
+
+/* === User === */
+
+.user {
+  clear: both;
+}
+
+.user .logoUser {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  float: left;
+}
+
+.user .userUrl {
+  float: left;
+  margin-top: 4px;
+  margin-left: 8px;
+  text-decoration: none;
+  color: #3853D1;
+}
+
+/* === Languages === */
+
+.langs {
+  clear: both;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+.langList {
+  margin-left: 30px;
+  font-style: italic;
+}
+
+/* === About === */
+
+.about {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.aboutText {
+  font-style: italic;
+}
+
+/* === Contributors === */
+
+.contrs {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.contrsList li {
+  list-style: none;
+}
+
+.contrsList li img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 5px;
+}

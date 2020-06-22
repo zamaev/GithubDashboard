@@ -3,7 +3,7 @@ import Search from './components/Search'
 import Section from './components/Section'
 import Pagination from './components/Pagination'
 
-class App extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props)
     this.handlePageChange = this.handlePageChange.bind(this)
@@ -48,4 +48,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default Home

@@ -8,6 +8,7 @@ class Pagination extends React.Component {
 
   changePage(e) {
     if (e.target.id) {
+      e.preventDefault()
       this.props.onPageChange(e.target.id)
     }
   }
