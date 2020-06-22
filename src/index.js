@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './repos.css';
+import './style.css';
 import Home from './Home';
 import Repos from './Repos';
 

@@ -23,7 +23,6 @@ class Section extends React.Component {
         return (
           <article key={art['id']}>
             <h3 className="repositoryTitle">
-              {/* <a href={"repos.html#" + art['full_name']}>{art['full_name']}</a> */}
               <a href={"/" + art['full_name']}>{art['full_name']}</a>
             </h3>
             <small className="stars">{art['stargazers_count']}</small>
@@ -40,7 +39,7 @@ class Section extends React.Component {
       try {
         return this.getArticles()
       } catch (e) {
-        return <code>API rate limit exceeded for your IP. <br /> Wait a few seconds and restart the browser</code>
+        return <code>API rate limit exceeded for your IP. <br /> Wait a few seconds and restart the browser.</code>
       }
     } else {
       apiService.getRepositoriesByPage(this.props.query, this.props.page)

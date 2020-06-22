@@ -36,8 +36,8 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="app">
-        <header className="header">
+      <div id="home">
+        <header>
           <h1>Github Dashboard</h1>
         </header>
         <Search onQueryChange={this.handleQueryChange} query={this.state.query} />

@@ -27,6 +27,24 @@ h1 {
 }
 
 
+/* ===== Search ===== */
+
+input.search {
+  width: 400px;
+  padding: 9px;
+  display: block;
+  margin: 40px auto;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  transition: border .3s;
+}
+
+input.search:hover {
+  border-bottom: 1px solid #3853D1;
+}
+
+
 /* ===== Section ===== */
 
 section {
@@ -40,9 +58,61 @@ section article {
   padding: 20px;
 }
 
-section article:first-child {
+#home section article:first-child {
   border-top: 0;
 }
+
+
+/* === Article Home elements === */
+
+#home .repositoryTitle {
+  float: left;
+}
+
+#home .stars {
+  background-image: url(https://img.icons8.com/fluent/48/000000/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 23px;
+  float: right;
+  margin-top: 7px;
+}
+
+#home .updateDate { 
+  clear: both;
+}
+
+#home .githubUrl a {
+  text-decoration: none;
+}
+
+
+/* ===== Pagination ===== */
+
+.pagination {
+  margin: 40px;
+  text-align: center;
+}
+
+.pagination a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 3px;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: #3853D1;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+
+/* ============== Repos ============== */
 
 
 /* ===== Article elements ===== */
@@ -60,12 +130,12 @@ section article:first-child {
   background-repeat: no-repeat;
 }
 
-.repositoryTitle {
+#repos .repositoryTitle {
   float: left;
   margin-bottom: 20px;
 }
 
-.stars {
+#repos .stars {
   background-image: url(https://img.icons8.com/fluent/48/000000/star.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -75,7 +145,7 @@ section article:first-child {
   margin-left: 15px;
 }
 
-.updateDate { 
+#repos .updateDate { 
   background-color: #3853D1;
   color: white;
   border-radius: 3px;
