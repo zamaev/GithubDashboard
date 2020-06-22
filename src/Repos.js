@@ -67,16 +67,21 @@ class Repos extends React.Component {
     )
   }
 
-  render() {
-    if (this.state.repos.message) {
+  renderRepos() {
+    try {
+      return this.getRepos()
+    } catch (e) {
       return <code>API rate limit exceeded for your IP. <br /> Wait a few seconds and restart the browser.</code>
     }
+  }
+
+  render() {
     return (
       <div id="repos">
         <header>
           <h1>Github Dashboard</h1>
         </header>
-        {this.getRepos()}
+        {this.renderRepos()}
       </div>
     )
   }
