@@ -4,9 +4,8 @@ class ApiService {
   }
 
   async getRepositoriesByPage(query, page) {
-    const url = query
-      ? this.baseUrl + `/search/repositories?q=${query}&page=${page}&per_page=10`
-      : this.baseUrl + `/search/repositories?q=stars:>0&page=${page}&per_page=10&sort=stars`
+    query = query || 'stars:>0'
+    const url = this.baseUrl + `/search/repositories?q=${query}&page=${page}&per_page=10&sort=stars`
     try {
       const data = await useFetch(url)
       return data['items']
