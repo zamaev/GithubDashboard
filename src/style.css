@@ -53,7 +53,7 @@ section {
   margin: 30px auto;
 }
 
-section article {
+#home section article {
   border-top: 1px solid #ddd;
   padding: 20px;
 }
